@@ -76,3 +76,147 @@ A custom YOLO-based object detection model implementation in **PyTorch** for **v
 pip install torch torchvision opencv-python numpy matplotlib pillow pycocotools tqdm
 ```
 
+---
+
+## Directory Structure:
+
+project/
+├── main.py           # Training & inference script
+├── model.py          # Model architecture (Backbone, Neck, Head)
+├── loss.py           # Custom loss functions
+├── dataset.py        # Dataset loader
+├── data/
+│   ├── train/
+│   │   ├── COCO.json
+│   │   └── images/
+│   ├── val/
+│   │   ├── COCO.json
+│   │   └── images/
+│   └── test/
+│       └── images/
+└── output/
+    ├── inference/    # Test predictions
+    └── coco_val/     # Validation results
+
+---
+
+## 📊 Dataset Format
+### COCO JSON Example:
+{
+  "images": [
+    {"id": 1, "file_name": "image1.jpg", "width": 640, "height": 480}
+  ],
+  "annotations": [
+    {"id": 1, "image_id": 1, "category_id": 0, "bbox": [x, y, width, height]}
+  ],
+  "categories": [
+    {"id": 0, "name": "headlamp"},
+    {"id": 1, "name": "rear_bumper"}
+  ]
+}
+
+---
+
+## 🚀 Training
+### Hyperparameters
+num_epochs = 10
+batch_size = 4
+learning_rate = 0.001
+
+### Loss weights
+lambda_box = 7.5   # Bounding box loss
+lambda_obj = 1.0   # Objectness loss
+lambda_cls = 0.5   # Classification loss
+
+### Run training
+python main.py
+
+### Training Output:
+- Progress bar with per-batch loss 
+- Epoch-level average loss
+- Real-time loss curve visualization
+
+---
+
+## ✅ Validation
+### Includes:
+- Validation loss computation
+- COCO-style evaluation metrics:
+- mAP@[.5:.95] (Primary metric)
+- mAP@0.5
+- mAP@0.75
+- Recall
+- Precision
+
+---
+
+## 🔮 Inference
+### Test configuration
+conf_threshold = 0.5  # Confidence threshold for detections
+
+model.eval()
+### Processes all images in data/test/
+
+---
+
+## 📤 Output
+### Visual Output
+1. Red contours around detected damage
+2. Semi-transparent overlay (25% opacity)
+3. Canny edge detection for precision
+
+## 📈 Model Performance
+### Training Metrics
+- Device: CPU/CUDA (auto-detected)
+- Parameters: 19,894,977 (~19.89M)
+- Optimizer: AdamW
+- Visualization: Real-time training curve
+
+---
+
+## 🛠️ Key Components
+### Loss Function (MyLoss)
+
+total_loss = λ_box * L_box + λ_obj * L_obj + λ_cls * L_cls
+- Box loss: MSE on coordinates
+- Objectness loss: BCE for object presence
+- Class loss: BCE for multi-class prediction
+
+### Detection Decoding
+- Sigmoid activation for centers & confidences
+- Convert center-based → corner format
+- Confidence filtering
+
+### Visualization Enhancement
+- Gaussian blur + Canny edge detection
+- Morphological dilation for contours
+- Contour area filtering (>80 px)
+- Alpha blending for transparency
+
+---
+
+## 📝 Notes
+- Model uses normalized coordinates [0, 1] internally
+- Supports variable input sizes (default 640×640)
+- Trained on COCO classes, customized for 5 damage types
+- Pure in-memory processing (no external APIs)
+
+---
+
+## 🔧 Customization
+- To adapt for new classes:
+- Update num_classes in model initialization
+- Modify class_names in inference section
+- Update COCO JSON categories
+- Retrain the model
+
+---
+
+## 🖼️ Visual Examples
+
+Below are sample detection results from YOLOMine showing vehicle damage localization:
+
+<p align="center">
+   <img width="1000" height="800" alt="test_1" src="https://github.com/user-attachments/assets/1d4518c9-8243-4e0c-89e5-c79c67841ec5" />
+</p>
+
