@@ -220,6 +220,5 @@ Below are sample detection results from YOLOMine showing vehicle damage localiza
    <img width="1000" height="800" alt="test_1" src="https://github.com/user-attachments/assets/bc7681e7-a6ac-450f-b4ae-9469993e5349" />
 </p>
 
-![11]()
 
 
