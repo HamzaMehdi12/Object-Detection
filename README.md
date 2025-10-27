@@ -235,7 +235,7 @@ Below are sample detection results from YOLOMine showing vehicle damage localiza
 
 ## 👤 Author
 
-Muhammad Hamza Mehdi
-Framework: PyTorch
-License: Research / Educational Use
+**Muhammad Hamza Mehdi** \
+**Framework: PyTorch** \
+**License: Research / Educational Use** \
 
