@@ -79,7 +79,7 @@ pip install torch torchvision opencv-python numpy matplotlib pillow pycocotools 
 ---
 
 ## Directory Structure:
-
+```
 project/
 ├── main.py           # Training & inference script
 ├── model.py          # Model architecture (Backbone, Neck, Head)
@@ -97,7 +97,7 @@ project/
 └── output/
     ├── inference/    # Test predictions
     └── coco_val/     # Validation results
-
+```
 ---
 
 ## 📊 Dataset Format
