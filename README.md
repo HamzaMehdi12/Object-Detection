@@ -102,6 +102,7 @@ project/
 
 ## 📊 Dataset Format
 ### COCO JSON Example:
+```
 {
   "images": [
     {"id": 1, "file_name": "image1.jpg", "width": 640, "height": 480}
@@ -114,6 +115,7 @@ project/
     {"id": 1, "name": "rear_bumper"}
   ]
 }
+```
 
 ---
 
@@ -232,6 +234,8 @@ Below are sample detection results from YOLOMine showing vehicle damage localiza
 <p align="center">
    <img width="1000" height="800" alt="train_losses" src="https://github.com/user-attachments/assets/35c6524e-f9e8-4c1a-bc20-d3d49c12f467" />
 </p>
+
+---
 
 ## 👤 Author
 
