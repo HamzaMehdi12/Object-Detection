@@ -220,5 +220,22 @@ Below are sample detection results from YOLOMine showing vehicle damage localiza
    <img width="1000" height="800" alt="test_1" src="https://github.com/user-attachments/assets/bc7681e7-a6ac-450f-b4ae-9469993e5349" />
 </p>
 
+<p align="center">
+   <img width="1000" height="800" alt="test_2" src="https://github.com/user-attachments/assets/ccb7153f-1e6a-4449-86b8-c403647be234" />
+</p>
 
+<p align="center">
+   <img width="1000" height="800" alt="test_3" src="https://github.com/user-attachments/assets/01f63ff9-b4bb-47fc-b47f-f8436cd9327d" />
+</p>
+
+
+<p align="center">
+   <img width="1000" height="800" alt="train_losses" src="https://github.com/user-attachments/assets/35c6524e-f9e8-4c1a-bc20-d3d49c12f467" />
+</p>
+
+## 👤 Author
+
+Muhammad Hamza Mehdi
+Framework: PyTorch
+License: Research / Educational Use
 
