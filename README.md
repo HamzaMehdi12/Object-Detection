@@ -217,6 +217,9 @@ total_loss = λ_box * L_box + λ_obj * L_obj + λ_cls * L_cls
 Below are sample detection results from YOLOMine showing vehicle damage localization:
 
 <p align="center">
-   <img width="1000" height="800" alt="test_1" src="https://github.com/user-attachments/assets/1d4518c9-8243-4e0c-89e5-c79c67841ec5" />
+   <img width="1000" height="800" alt="test_1" src="https://github.com/user-attachments/assets/bc7681e7-a6ac-450f-b4ae-9469993e5349" />
 </p>
+
+![11]()
+
 
