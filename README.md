@@ -187,7 +187,9 @@ model.eval()
 ## 🛠️ Key Components
 ### Loss Function (MyLoss)
 
-total_loss = λ_box * L_box + λ_obj * L_obj + λ_cls * L_cls
+\[
+\text{Total Loss} = \lambda_{\text{box}} \times L_{\text{box}} + \lambda_{\text{obj}} \times L_{\text{obj}} + \lambda_{\text{cls}} \times L_{\text{cls}}
+\]
 - Box loss: MSE on coordinates
 - Objectness loss: BCE for object presence
 - Class loss: BCE for multi-class prediction
