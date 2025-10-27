@@ -251,3 +251,6 @@ Below are sample detection results from YOLOMine showing vehicle damage localiza
 **Framework: PyTorch** \
 **License: Research / Educational Use** \
 
+---
+
+⭐ **If you find this project helpful, please give it a star!**
